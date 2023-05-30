@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+button{
+    background-color: #fff;
+    border: none;
+}
+
+.repo-container {
+    min-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.repo-container__header{
+    margin: 10px 0;
+    text-align: center;
+}
+
+.repo-container__input {
+    box-sizing: border-box;
+    width: 370px;
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    outline: 1px rgb(0, 0, 0) solid;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.repo-container__search-icon{
+    position: absolute;
+    transform: translate(170px, 62px);
+    pointer-events: none;
+    fill: #bfbfbf;
+}
+
+.repo-container__card-container{
+    margin-top: 5px;
+}
+
+.card-container {
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    box-sizing: border-box;
+}
+
+.card-container__card {
+    padding: 8px;
+    margin-top: 5px;
+    outline: 1px rgb(0, 0, 0) solid;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.card-container__card:hover{
+    background-color: #efefef;
+    cursor:pointer;
+}
+
+.card-container__start-searching-info{
+    margin: 0;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.card-container__repo-name{
+    overflow-wrap: anywhere;
+    margin: 0;
+}
+
+.repo-container__saved-container{
+    margin-top: 20px;
+}
+
+.saved-container{
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+}
+
+.saved-container__card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    outline: 1px rgb(0, 0, 0) solid;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.saved-container__repo-name{
+    overflow-wrap: anywhere;
+    margin: 0;
+    margin-bottom: 4px;
+}
+.saved-container__repo-owner{
+    margin: 0;
+    margin-bottom: 4px;
+
+}
+
+.saved-container__repo-stars{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.saved-container__stars-counter{
+    margin-right: 6px;
+}
+.saved-container__saved-info{
+    text-align: center;
+    margin: 0;
+}
+
+.saved-container-actions{
+    width: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.saved-container-actions__visit{
+    width: 30px;
+    height: 30px;
+    background-color: #161B22;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.saved-container-actions__visit svg {
+    fill: #fff;
+    pointer-events: none;
+}
+
+.saved-container-actions__delete{
+    width: 30px;
+    height: 30px;
+    background-color: #fa7a7a;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.saved-container-actions__delete svg {
+    fill: #fff;
+    pointer-events: none;
+}
+
+.saved-container-actions__delete:hover{
+    cursor: pointer;
+    background-color: #f1acac;
+}
