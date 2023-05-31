@@ -103,9 +103,9 @@ button{
     margin-bottom: 4px;
 }
 .saved-container__repo-owner{
+    overflow-wrap: anywhere;
     margin: 0;
     margin-bottom: 4px;
-
 }
 
 .saved-container__repo-stars{
@@ -148,6 +148,7 @@ button{
 }
 
 .saved-container-actions__delete{
+    margin-left: 8px;
     width: 30px;
     height: 30px;
     background-color: #fa7a7a;
