@@ -129,6 +129,7 @@ function createRepoCardsFromData(data) {
 		removeAllRepoChildren();
 		repoContainer.appendChild(fragment);
 	} else {
+		removeAllRepoChildren();
 		repoInfo.textContent = "Nothing was found";
 	}
 }
