@@ -113,8 +113,6 @@ function createRepoCard(repoName, dataOwner, dataStarCount, dataLink) {
 
 function createRepoCardsFromData(data) {
 	if (data.total_count > 0) {
-		repoInfo.textContent = "";
-
 		let fragment = document.createDocumentFragment();
 
 		data.items.forEach((card) => {
@@ -126,6 +124,7 @@ function createRepoCardsFromData(data) {
 			fragment.appendChild(createRepoCard(name, owner, stars, url));
 		});
 
+		repoInfo.textContent = "";
 		removeAllRepoChildren();
 		repoContainer.appendChild(fragment);
 	} else {
