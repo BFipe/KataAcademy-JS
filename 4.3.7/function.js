@@ -136,7 +136,6 @@ function createRepoCardsFromData(data) {
 function searchRepos() {
 	let value = repoInput.value;
 
-	repoInfo.textContent = "";
 	if (Boolean(value.trim())) {
 		fetch(
 			`https://api.github.com/search/repositories?q=${value}&per_page=5&sort=popularity`,
@@ -148,11 +147,20 @@ function searchRepos() {
 				},
 			}
 		)
-			.then((response) => response.json())
+			.then((response) => {
+				if (response.ok) {
+					return response.json();
+				} else {
+					throw new Error(
+						"Cannot fetch data from api.github.com/search/repositories"
+					);
+				}
+			})
 			.then((data) => createRepoCardsFromData(data))
 			.catch((err) => {
+				removeAllRepoChildren();
 				repoInfo.textContent =
-					"Произошла ошибкаs во время обработки запроса. Пожалуйста, попробуйте позже.";
+					"Произошла ошибка во время обработки запроса. Пожалуйста, попробуйте позже.";
 				console.log(err);
 			});
 	} else {
