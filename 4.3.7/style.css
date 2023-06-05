@@ -13,8 +13,10 @@ button{
     min-width: 500px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    margin-top: 100px;
 }
 
 .repo-container__header{
@@ -24,7 +26,7 @@ button{
 
 .repo-container__input {
     box-sizing: border-box;
-    width: 370px;
+    width: 90%;
     height: 28px;
     padding: 0 10px;
     border-radius: 5px;
@@ -33,19 +35,19 @@ button{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.repo-container__search-icon{
-    position: absolute;
-    transform: translate(170px, 62px);
-    pointer-events: none;
-    fill: #bfbfbf;
-}
-
 .repo-container__card-container{
     margin-top: 5px;
 }
 
+.searching-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+}
+
 .card-container {
-    width: 370px;
+    width: 90%;
     display: flex;
     flex-direction: column;
     text-align: start;
